@@ -10,6 +10,10 @@ import java.util.*;
 
 public class ToolSwitchingMain {
     public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.print("Please specify three arguments: path_to_file problem_to_solve search_type");
+            return;
+        }
 
         try {
             long t0 = System.currentTimeMillis();
@@ -53,7 +57,6 @@ public class ToolSwitchingMain {
         }
         catch (Exception e) {
             System.out.print("error with "+args[0] + ";" + args[1] + ";" + args[2]+ "\n");
-            throw e;
         }
     }
 }

@@ -2,12 +2,24 @@ package examples.jstsp;
 
 import org.junit.Assert;
 import org.junit.Test;
+import solver.AnytimeColumnSearch;
 import solver.Astar;
 import util.Result;
 
 import java.util.List;
 
 public class ToolSwitchingAstarTest {
+
+    @Test
+    public void dummyTest() {
+        long t0 = System.currentTimeMillis();
+        ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/dummy.txt", "problem 1");
+        ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost());
+        //List<List<Integer>> min_cost = instance.getMin_cost();
+        Astar astar = new Astar();
+        Result res = astar.solve(model);
+        Assert.assertEquals(res.getCost(), 11);
+    }
     @Test
     public void datA1_1Test() {
         ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/Catanzaro/datA1", "problem 1");

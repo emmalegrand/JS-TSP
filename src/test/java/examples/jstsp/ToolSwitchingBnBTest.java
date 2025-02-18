@@ -4,12 +4,27 @@ import abstraction.OpenNodes;
 import org.junit.Assert;
 import org.junit.Test;
 import solver.AnytimeColumnSearch;
+import solver.AnytimeWeigthedAstar;
 import solver.Astar;
 import solver.BranchAndBound;
 import util.BestFirstOpenNodes;
 import util.Result;
 
 public class ToolSwitchingBnBTest {
+
+    @Test
+    public void dummyTest() {
+        long t0 = System.currentTimeMillis();
+        ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/dummy.txt", "problem 1");
+        ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost());
+        BranchAndBound<ToolSwitchingState> bnb = new BranchAndBound<>();
+        OpenNodes<ToolSwitchingState> openNodes = new BestFirstOpenNodes<>();
+        Result res =  bnb.minimize(model, openNodes, pair -> {
+            System.out.println("new best solution: " + pair.f);
+        },false);
+        Assert.assertEquals(res.getCost(), 11);
+    }
+
     @Test
     public void datA1_1Test() {
         long t0 = System.currentTimeMillis();

@@ -81,10 +81,10 @@ public class ToolSwitchingModel implements Model<ToolSwitchingState> {
         int slack = this.instance.c - this.instance.tools[decision].size();
         long free = this.instance.jobs[source.currentJobIdx] & ~this.instance.jobs[decision];
         if (slack > 0) {
+            if (slack < fnew.size) {
+                fnew.removeFrom(slack);
+            }
             if (free != 0L) {
-                if (slack < fnew.size) {
-                    fnew.removeFrom(slack);
-                }
                 fnew.add(slack, free);
             }
         } else {

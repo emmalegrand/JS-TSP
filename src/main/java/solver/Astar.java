@@ -49,7 +49,7 @@ public class Astar<S extends State>  {
                     parent.put(t.getSuccessor(), current.state);
                     if (!present.contains(sp)){
                         open.add(sp);
-                        present.add((S) current.state);
+                        present.add(t.getSuccessor());
                     }
                 }
 

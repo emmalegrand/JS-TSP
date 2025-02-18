@@ -9,6 +9,20 @@ import util.DepthFirstOpenNodes;
 import util.Result;
 
 public class ToolSwitchingKTNSBnBTest {
+
+    @Test
+    public void dummyTest() {
+        long t0 = System.currentTimeMillis();
+        ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/dummy.txt", "problem 1");
+        ToolSwitchingModelKTNS model = new ToolSwitchingModelKTNS(instance, instance.getMin_cost());
+        BranchAndBoundKTNS<ToolSwitchingKTNSState> bnb = new BranchAndBoundKTNS<>();
+        OpenNodes<ToolSwitchingKTNSState> openNodes = new DepthFirstOpenNodes<>();
+        Result res =  bnb.minimize(model, openNodes, pair -> {
+            System.out.println("new best solution: " + pair.f);
+        },true);
+        Assert.assertEquals(res.getCost(), 11);
+    }
+
     @Test
     public void datA1_1Test() {
         long t0 = System.currentTimeMillis();

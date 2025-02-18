@@ -7,6 +7,18 @@ import solver.Astar;
 import util.Result;
 
 public class ToolSwitchingACSTest {
+
+    @Test
+    public void dummyTest() {
+        long t0 = System.currentTimeMillis();
+        ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/dummy.txt", "problem 1");
+        ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost());
+        //List<List<Integer>> min_cost = instance.getMin_cost();
+        AnytimeColumnSearch acs = new AnytimeColumnSearch();
+        Result res = acs.solve(model,instance.n,5);
+        Assert.assertEquals(res.getCost(), 11);
+    }
+
     @Test
     public void datA1_1Test() {
         long t0 = System.currentTimeMillis();

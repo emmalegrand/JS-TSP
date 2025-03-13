@@ -1,7 +1,9 @@
 package examples.jstsp;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +26,7 @@ public class ToolSwitchingInstanceTest {
             {0,2,1,2,2,2,3,4,3,2,Double.MAX_VALUE}};
         double[][] minCost = instance.getMin_cost();
         for (int i = 0; i < minCostExpected.length; i++) {
-            Assert.assertTrue(Arrays.equals(minCostExpected[i], minCost[i]));
+            assertTrue(Arrays.equals(minCostExpected[i], minCost[i]));
         }
     }
 

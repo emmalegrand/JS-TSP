@@ -45,7 +45,7 @@ public class ToolSwitchingInstance {
         try {
             lines = Files.readAllLines(Paths.get(filename));
         } catch (IOException e) {
-            return null; // Convert error to null
+            return null;// Convert error to null
         }
 
         int n = 0, m = 0, min = 0, max = 0, c = 0;

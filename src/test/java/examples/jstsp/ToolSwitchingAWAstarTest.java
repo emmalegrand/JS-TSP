@@ -1,7 +1,9 @@
 package examples.jstsp;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import solver.AnytimeWeigthedAstar;
 import solver.Astar;
 import util.Result;
@@ -18,7 +20,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA1_1Test() {
@@ -28,7 +30,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
 
     @Test
@@ -39,7 +41,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -50,7 +52,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -61,7 +63,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -72,7 +74,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -83,7 +85,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
 
     @Test
@@ -94,7 +96,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -105,7 +107,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -116,7 +118,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -127,7 +129,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
 
     }
 
@@ -139,7 +141,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -150,7 +152,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -161,7 +163,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -172,7 +174,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -183,7 +185,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -194,7 +196,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -205,7 +207,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -216,7 +218,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -227,7 +229,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -238,7 +240,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
 
     }
 
@@ -250,7 +252,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -261,7 +263,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -272,7 +274,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -283,7 +285,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -294,7 +296,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -305,7 +307,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -316,7 +318,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -327,7 +329,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -338,7 +340,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -349,7 +351,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 
@@ -361,7 +363,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -372,7 +374,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -383,7 +385,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -394,7 +396,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -405,7 +407,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -416,7 +418,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -427,7 +429,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -438,7 +440,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -449,7 +451,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -460,7 +462,7 @@ public class ToolSwitchingAWAstarTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         AnytimeWeigthedAstar awa = new AnytimeWeigthedAstar();
         Result res = awa.solve(model, 1.5);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 }

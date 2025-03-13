@@ -1,7 +1,9 @@
 package examples.jstsp;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import solver.AnytimeColumnSearch;
 import solver.IterativeBeamSearch;
 import util.Result;
@@ -18,7 +20,7 @@ public class ToolSwitchingIBSTest {
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -30,7 +32,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
     @Test
     public void datA1_2Test() {
@@ -40,7 +42,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA1_3Test() {
@@ -50,7 +52,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
     @Test
     public void datA1_4Test() {
@@ -60,7 +62,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
     @Test
     public void datA1_5Test() {
@@ -70,7 +72,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
     @Test
     public void datA1_6Test() {
@@ -80,7 +82,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
     @Test
     public void datA1_7Test() {
@@ -90,7 +92,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
     @Test
     public void datA1_8Test() {
@@ -100,7 +102,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA1_9Test() {
@@ -110,7 +112,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
     @Test
     public void datA1_10Test() {
@@ -120,7 +122,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
 
     }
     @Test
@@ -131,7 +133,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA2_2Test() {
@@ -141,7 +143,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA2_3Test() {
@@ -151,7 +153,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA2_4Test() {
@@ -161,7 +163,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA2_5Test() {
@@ -171,7 +173,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA2_6Test() {
@@ -181,7 +183,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
     @Test
     public void datA2_7Test() {
@@ -191,7 +193,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA2_8Test() {
@@ -201,7 +203,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA2_9Test() {
@@ -211,7 +213,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA2_10Test() {
@@ -221,7 +223,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
 
     }
 
@@ -233,7 +235,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_2Test() {
@@ -243,7 +245,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_3Test() {
@@ -253,7 +255,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_4Test() {
@@ -263,7 +265,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_5Test() {
@@ -273,7 +275,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_6Test() {
@@ -283,7 +285,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
     @Test
     public void datA3_7Test() {
@@ -293,7 +295,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_8Test() {
@@ -303,7 +305,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_9Test() {
@@ -313,7 +315,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA3_10Test() {
@@ -323,7 +325,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 
@@ -335,7 +337,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_2Test() {
@@ -345,7 +347,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_3Test() {
@@ -355,7 +357,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_4Test() {
@@ -365,7 +367,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_5Test() {
@@ -375,7 +377,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_6Test() {
@@ -385,7 +387,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_7Test() {
@@ -395,7 +397,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_8Test() {
@@ -405,7 +407,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_9Test() {
@@ -415,7 +417,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
     @Test
     public void datA4_10Test() {
@@ -425,7 +427,7 @@ ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost
         //List<List<Integer>> min_cost = instance.getMin_cost();
         IterativeBeamSearch ibs = new IterativeBeamSearch();
         Result res = ibs.solve(model);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 }

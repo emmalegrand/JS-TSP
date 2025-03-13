@@ -1,8 +1,10 @@
 package examples.jstsp;
 
 import abstraction.OpenNodes;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import solver.BranchAndBoundKTNS;
 import util.BestFirstOpenNodes;
 import util.DepthFirstOpenNodes;
@@ -20,7 +22,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -33,7 +35,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
 
     @Test
@@ -46,7 +48,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -59,7 +61,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -72,7 +74,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -85,7 +87,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -98,7 +100,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 14);
+        assertEquals(res.getCost(), 14);
     }
 
     @Test
@@ -111,7 +113,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -124,7 +126,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -137,7 +139,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 13);
+        assertEquals(res.getCost(), 13);
     }
 
     @Test
@@ -150,7 +152,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
 
     }
 
@@ -164,7 +166,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -177,7 +179,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -190,7 +192,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -203,7 +205,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -216,7 +218,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -229,7 +231,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 12);
+        assertEquals(res.getCost(), 12);
     }
 
     @Test
@@ -242,7 +244,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -255,7 +257,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -268,7 +270,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -281,7 +283,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
 
     }
 
@@ -295,7 +297,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -308,7 +310,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -321,7 +323,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -334,7 +336,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -347,7 +349,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -360,7 +362,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 11);
+        assertEquals(res.getCost(), 11);
     }
 
     @Test
@@ -373,7 +375,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -386,7 +388,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -399,7 +401,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -412,7 +414,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 
@@ -426,7 +428,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -439,7 +441,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -452,7 +454,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -465,7 +467,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -478,7 +480,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -491,7 +493,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -504,7 +506,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -517,7 +519,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -530,7 +532,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
     }
 
     @Test
@@ -543,7 +545,7 @@ public class ToolSwitchingKTNSBnBTest {
         Result res =  bnb.minimize(model, openNodes, pair -> {
             System.out.println("new best solution: " + pair.f);
         },true);
-        Assert.assertEquals(res.getCost(), 10);
+        assertEquals(res.getCost(), 10);
 
     }
 }

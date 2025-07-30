@@ -1,11 +1,14 @@
 package examples.jstsp;
 
+import abstraction.OpenNodes;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import solver.AnytimeColumnSearch;
 import solver.Astar;
+import solver.BranchAndBoundKTNS;
+import util.DepthFirstOpenNodes;
 import util.Result;
 
 import java.util.List;
@@ -21,6 +24,35 @@ public class ToolSwitchingAstarTest {
         Astar astar = new Astar();
         Result res = astar.solve(model);
         assertEquals(res.getCost(), 11);
+    }
+    @Test
+    public void YanasseTest() {
+        for(int i=1;i<30;i++) {
+            for (int j=1;j<=10;j++) {
+                ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/Yanasse/Tabela1/L" + i + ".txt", "problem "+j);
+                ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost());
+                Astar astar = new Astar();
+                Result res = astar.solve(model);
+                ToolSwitchingModelKTNS modelktns = new ToolSwitchingModelKTNS(instance, instance.getMin_cost());
+                BranchAndBoundKTNS<ToolSwitchingKTNSState> bnb = new BranchAndBoundKTNS<>();
+                OpenNodes<ToolSwitchingKTNSState> openNodes = new DepthFirstOpenNodes<>();
+                Result resBnB = bnb.minimize(modelktns, openNodes, pair -> {}, true);
+                assertEquals(res.getCost(), resBnB.getCost());
+            }
+        }
+        for(int i=1;i<30;i++) {
+            for (int j=1;j<=10;j++) {
+                ToolSwitchingInstance instance = ToolSwitchingInstance.readFile("data/toolswitching/Yanasse/Tabela2/L" + i + ".txt", "problem "+j);
+                ToolSwitchingModel model = new ToolSwitchingModel(instance, instance.getMin_cost());
+                Astar astar = new Astar();
+                Result res = astar.solve(model);
+                ToolSwitchingModelKTNS modelktns = new ToolSwitchingModelKTNS(instance, instance.getMin_cost());
+                BranchAndBoundKTNS<ToolSwitchingKTNSState> bnb = new BranchAndBoundKTNS<>();
+                OpenNodes<ToolSwitchingKTNSState> openNodes = new DepthFirstOpenNodes<>();
+                Result resBnB = bnb.minimize(modelktns, openNodes, pair -> {}, true);
+                assertEquals(res.getCost(), resBnB.getCost());
+            }
+        }
     }
     @Test
     public void datA1_1Test() {

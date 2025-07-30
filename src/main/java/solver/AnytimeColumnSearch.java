@@ -31,18 +31,18 @@ public class AnytimeColumnSearch<S extends State> {
         HashMap<S, Integer> g = new HashMap<>();
         HashSet<S> closed = new HashSet<>();
         ArrayList<PriorityQueue<Pair<S>>> open = new ArrayList<>();
-        HashSet<S>[] present = new HashSet[V];
+        HashMap<S, Double>[] present = new HashMap[V];
         int nb_nodes = 0;
         for (int i = 0; i < V; i++) {
             open.add(new PriorityQueue<>(new PairComparator()));
-            present[i] = new HashSet<>();
+            present[i] = new HashMap<>();
         }
         S rootState = model.initial_state();
         int ub = Integer.MAX_VALUE;
         res.addUbTime(new double[]{ub,System.currentTimeMillis()-t0});
         double h0 = model.lowerBound(rootState);
         open.get(0).add(new Pair(rootState, h0));
-        present[0].add(rootState);
+        present[0].put(rootState,h0);
         g.put(rootState, 0);
 
         while (!empty(open)) {
@@ -65,8 +65,7 @@ public class AnytimeColumnSearch<S extends State> {
                             Transition<S> t = model.transition(state, succ);
                             double h =  model.lowerBound(t.getSuccessor());
                             double ghval = max(t.getValue() + val_g_state + h,pair.f );
-
-                            if (((present[k+1].contains(t.getSuccessor()) | closed.contains(t.getSuccessor())) && (t.getValue() + val_g_state) > g.getOrDefault(t.getSuccessor(), Integer.MAX_VALUE)) || ghval >= ub) {
+                            if (((present[k+1].get(t.getSuccessor())!=null | closed.contains(t.getSuccessor())) && (t.getValue() + val_g_state) > g.getOrDefault(t.getSuccessor(), Integer.MAX_VALUE)) || ghval >= ub) {
                                 continue;
                             }
                             g.put(t.getSuccessor(), t.getValue() + val_g_state);
@@ -87,9 +86,11 @@ public class AnytimeColumnSearch<S extends State> {
                                     closed.add(t.getSuccessor());
                                 }
                             }else {
-                                if (!present[k+1].contains(t.getSuccessor())) {
+                                if (present[k+1].get(t.getSuccessor())==null) {
                                     open.get(k + 1).add(new Pair(t.getSuccessor(), ghval));
-                                    present[k+1].add(t.getSuccessor());
+                                    present[k+1].put(t.getSuccessor(),ghval);
+                                }else if (present[k+1].get(t.getSuccessor())>ghval) {
+                                    open.get(k + 1).add(new Pair(t.getSuccessor(), ghval));
                                 }
                                 if (closed.contains(t.getSuccessor())) {
                                     closed.remove(t.getSuccessor());

@@ -20,13 +20,13 @@ public class AnytimeWeigthedAstar<S extends State> {
         HashMap<S, Double> f = new HashMap<>();
         PriorityQueue<Pair> open = new PriorityQueue<>(new PairComparator());
         HashSet<S> closed = new HashSet<>();
-        HashSet<S> present = new HashSet<>();
+        HashMap<S, Double> present = new HashMap();
         S rootState = model.initial_state();
         int ub = Integer.MAX_VALUE;
         res.addUbTime(new double[]{ub,System.currentTimeMillis()-t0});
         double h0 = model.lowerBound(rootState);
         open.add(new Pair(rootState, w * h0));
-        present.add(rootState);
+        present.put(rootState,h0);
         g.put(rootState, 0);
         f.put(rootState, h0);
         while (!open.isEmpty()) {
@@ -39,7 +39,7 @@ public class AnytimeWeigthedAstar<S extends State> {
                 Transition<S> t = model.transition( current.state, succ);
                 double h = model.lowerBound(t.getSuccessor());
                 double ghval = max( t.getValue() + g.get(current.state) + h,f.get(current.state));
-                if (((present.contains(t.getSuccessor()) | closed.contains(t.getSuccessor())) && (t.getValue() + g.get(current.state)) > g.getOrDefault(t.getSuccessor(), Integer.MAX_VALUE)) || (ghval) >= ub) {
+                if (((present.containsKey(t.getSuccessor()) | closed.contains(t.getSuccessor())) && (t.getValue() + g.get(current.state)) > g.getOrDefault(t.getSuccessor(), Integer.MAX_VALUE)) || (ghval) >= ub) {
                     continue;
                 }
                 g.put(t.getSuccessor(), t.getValue() + g.get(current.state));
@@ -56,9 +56,12 @@ public class AnytimeWeigthedAstar<S extends State> {
                     }
                     closed.add(t.getSuccessor());
                 } else {
-                    if (!present.contains(t.getSuccessor())) {
-                        open.add(new Pair(t.getSuccessor(), (t.getValue() + g.get(current.state)) + w * h));
-                        present.add(t.getSuccessor());
+                    Pair sp = new Pair(t.getSuccessor(), (t.getValue() + g.get(current.state)) + w * h);
+                    if (!present.containsKey(t.getSuccessor())) {
+                        open.add(sp);
+                        present.put(t.getSuccessor(),ghval);
+                    }else if (present.get(t.getSuccessor())>ghval) {
+                        open.add(sp);
                     }
                     if (closed.contains(t.getSuccessor())) {
                         closed.remove(t.getSuccessor());

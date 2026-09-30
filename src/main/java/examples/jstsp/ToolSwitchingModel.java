@@ -249,10 +249,13 @@ public class ToolSwitchingModel implements Model<ToolSwitchingState> {
                         PairLi p1 = tools.get(find_v1);
                         PairLi p2 = tools.get(find_v2);
 
-
+                        if ((p1.tools_req ^ p2.tools_req) != 0L && p1.cost!=0 && p2.cost!=0){
+                            p1.cost = max(p1.cost,p2.cost)+edge.cost();
+                        }else{
+                            p1.cost += edge.cost() + p2.cost;
+                        }
                         p1.tools_req = p1.tools_req | p2.tools_req;
                         int nb_tools_req = Long.bitCount(p1.tools_req);
-                        p1.cost += edge.cost() + p2.cost;
                         if (explored==n-1){
                             p1.cost = max(p1.cost,max(nb_tools_req - this.instance.c + max(this.instance.c-toolactive, 0),0));
                         }
